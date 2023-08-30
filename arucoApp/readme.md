@@ -1,1 +1,1 @@
-Aruco detection application for ASTRA 2023 Autonomous navigation
+    Aruco detection application for ASTRA 2023 Autonomous navigation
