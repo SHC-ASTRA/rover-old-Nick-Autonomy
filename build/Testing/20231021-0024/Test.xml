@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-MSBuild"
+	BuildStamp="20231021-0024-Experimental"
+	Name="LAPTOP-DHMFOT8H"
+	Generator="ctest-3.27.6"
+	CompilerName="C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe"
+	CompilerVersion="19.29.30148.0"
+	OSName="Windows"
+	Hostname="LAPTOP-DHMFOT8H"
+	OSRelease=" Professional"
+	OSVersion=" (Build 22621)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="5"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="18900"
+	TotalPhysicalMemory="16135"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2592"
+	>
+	<Testing>
+		<StartDateTime>Oct 20 19:47 Central Daylight Time</StartDateTime>
+		<StartTestTime>1697849256</StartTestTime>
+		<TestList/>
+		<EndDateTime>Oct 20 19:47 Central Daylight Time</EndDateTime>
+		<EndTestTime>1697849256</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
