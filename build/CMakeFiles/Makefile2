@@ -63,8 +63,8 @@ CMAKE_BINARY_DIR = /home/nick/rover-Autonomy/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/nav.dir/all
 all: CMakeFiles/navigator.dir/all
+all: CMakeFiles/nav.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,35 +72,9 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/nav.dir/clean
 clean: CMakeFiles/navigator.dir/clean
+clean: CMakeFiles/nav.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/nav.dir
-
-# All Build rule for target.
-CMakeFiles/nav.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=1,2,3 "Built target nav"
-.PHONY : CMakeFiles/nav.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/nav.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 0
-.PHONY : CMakeFiles/nav.dir/rule
-
-# Convenience name for target.
-nav: CMakeFiles/nav.dir/rule
-.PHONY : nav
-
-# clean rule for target.
-CMakeFiles/nav.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/clean
-.PHONY : CMakeFiles/nav.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/navigator.dir
@@ -127,6 +101,32 @@ navigator: CMakeFiles/navigator.dir/rule
 CMakeFiles/navigator.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigator.dir/build.make CMakeFiles/navigator.dir/clean
 .PHONY : CMakeFiles/navigator.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/nav.dir
+
+# All Build rule for target.
+CMakeFiles/nav.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=1,2,3 "Built target nav"
+.PHONY : CMakeFiles/nav.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/nav.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 0
+.PHONY : CMakeFiles/nav.dir/rule
+
+# Convenience name for target.
+nav: CMakeFiles/nav.dir/rule
+.PHONY : nav
+
+# clean rule for target.
+CMakeFiles/nav.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/clean
+.PHONY : CMakeFiles/nav.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

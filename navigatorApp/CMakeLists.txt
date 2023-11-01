@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 3.1.0)
 project(navigator VERSION 0.1.0)
 
+
+
+add_executable(${PROJECT_NAME} src/navigator.cpp)
+
 file(GLOB CLASS_IMPLEMENTATIONS "source/*.cc")
 add_library(nav ${CLASS_IMPLEMENTATIONS})
 message(${CLASS_IMPLEMENTATIONS})
-add_executable(${PROJECT_NAME} src/navigator.cpp)
+
+
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/src)
 target_link_libraries(nav)

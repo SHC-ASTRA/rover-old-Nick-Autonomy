@@ -15,8 +15,6 @@
 namespace nav{
     class GlobalNavigator : Daedalus{
         public:
-        GlobalNavigator(){};
-        ~GlobalNavigator()= default;
         bool executeNav() override;
     };
 }

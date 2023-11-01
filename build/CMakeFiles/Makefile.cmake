@@ -129,6 +129,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/nav.dir/DependInfo.cmake"
   "CMakeFiles/navigator.dir/DependInfo.cmake"
+  "CMakeFiles/nav.dir/DependInfo.cmake"
   )

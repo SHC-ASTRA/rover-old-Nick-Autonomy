@@ -137,19 +137,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named nav
-
-# Build rule for target.
-nav: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nav
-.PHONY : nav
-
-# fast build rule for target.
-nav/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
-.PHONY : nav/fast
-
-#=============================================================================
 # Target rules for targets named navigator
 
 # Build rule for target.
@@ -161,6 +148,19 @@ navigator: cmake_check_build_system
 navigator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigator.dir/build.make CMakeFiles/navigator.dir/build
 .PHONY : navigator/fast
+
+#=============================================================================
+# Target rules for targets named nav
+
+# Build rule for target.
+nav: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nav
+.PHONY : nav
+
+# fast build rule for target.
+nav/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
+.PHONY : nav/fast
 
 source/GlobalNavigator.o: source/GlobalNavigator.cc.o
 .PHONY : source/GlobalNavigator.o
