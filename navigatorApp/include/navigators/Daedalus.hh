@@ -13,10 +13,11 @@
 //Unmanned Systems
 ///
 */
+#pragma once
 #include "../dataTypes/GPS.hh"
 #include "../dataTypes/navStates.hh"
 #ifndef DAEDALUS
-#define DEADALUS
+#define DAEDALUS
 namespace nav{
 
     class Daedalus{
@@ -28,11 +29,15 @@ namespace nav{
         int targetState = IDLE;
         int goalState = ABORT;
         public:
-        Daedalus();
+        Daedalus(){
+
+        };
 
         ~Daedalus() = default;
 
-        virtual bool executeNav();
+        virtual bool executeNav(){
+            return false;
+        };
 
 
     };

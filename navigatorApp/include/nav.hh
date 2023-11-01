@@ -9,6 +9,7 @@
 //https://app.diagrams.net/#G11xkbU996_WanYtTfMBRpjXm4N-WsP5TJ
 ///
 */
+#pragma once
 #ifndef NAVIGATOR_COMPONENT
 #define NAVIGATOR_COMPONENT
 #include "dataTypes/GPS.hh"
@@ -22,7 +23,9 @@ namespace nav{
         GlobalNaviator globalNav;
         LocalNavigator localNav;
         public:
-        Navigator();
+        Navigator(){
+            
+        };
 
         ~Navigator() = default;
 

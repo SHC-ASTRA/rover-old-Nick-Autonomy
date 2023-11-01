@@ -9,6 +9,7 @@
 //https://app.diagrams.net/#G11xkbU996_WanYtTfMBRpjXm4N-WsP5TJ
 ///
 */
+#pragma once
 #ifndef NAV_STATES
 #define NAV_STATES
 namespace nav{
