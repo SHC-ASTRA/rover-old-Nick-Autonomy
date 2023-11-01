@@ -20,7 +20,7 @@ namespace nav{
 
     class Navigator{
         private:
-        GlobalNaviator globalNav;
+        GlobalNavigator globalNav;
         LocalNavigator localNav;
         public:
         Navigator(){

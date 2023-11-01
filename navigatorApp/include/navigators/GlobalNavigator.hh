@@ -10,13 +10,13 @@
 */
 #pragma once
 #include "Daedalus.hh"
-#ifndef GLOABAL_NAV
+#ifndef GLOBAL_NAV
 #define GLOBAL_NAV
 namespace nav{
-    class GlobalNaviator : Daedalus{
+    class GlobalNavigator : Daedalus{
         public:
-        GlobalNaviator(){};
-        ~GlobalNaviator()= default;
+        GlobalNavigator(){};
+        ~GlobalNavigator()= default;
         bool executeNav() override;
     };
 }

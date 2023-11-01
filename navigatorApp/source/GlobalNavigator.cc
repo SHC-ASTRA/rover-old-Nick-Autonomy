@@ -2,7 +2,7 @@
 #include "../include/dataTypes/GPS.hh"
 #include <math.h>
 #define PI 3.14159265358979323846
-bool nav::GlobalNaviator::executeNav(){
+bool nav::GlobalNavigator::executeNav(){
     //First check for new GPS data, if none request new packet (needs to be handled by the teensy IF (will be attribute to navigator component))
     //On callback return true then the next step can run, this is the real brains of global nav
     nav::GPS heading = nav::vectorize(current,previous);
