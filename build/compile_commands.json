@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/nick/rover-Autonomy/build",
+  "command": "/usr/bin/g++  -I/home/nick/rover-Autonomy/navigatorApp/include -I/home/nick/rover-Autonomy/navigatorApp/src -I/usr/local/include/opencv4 -g -o CMakeFiles/navigator.dir/src/navigator.cpp.o -c /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp",
+  "file": "/home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp"
+}
+]

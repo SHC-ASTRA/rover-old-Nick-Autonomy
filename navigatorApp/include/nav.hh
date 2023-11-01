@@ -1,65 +1,36 @@
+/*
+@DESIGN
+///
+// Declares the nav package and all upper level handlers for navigation
+// Acts as highest level component for navigation 
+///
+@MODEL
+///
+//https://app.diagrams.net/#G11xkbU996_WanYtTfMBRpjXm4N-WsP5TJ
+///
+*/
 #ifndef NAVIGATOR_COMPONENT
 #define NAVIGATOR_COMPONENT
-#include <array>
-
+#include "dataTypes/GPS.hh"
+#include "dataTypes/navStates.hh"
+#include "navigators/GlobalNavigator.hh"
+#include "navigators/LocalNavigator.hh"
 namespace nav{
-    typedef std::array<double,2> GPS;
-    
-    enum AutonomousState{
-        IDLE =0,
-        NAVIGATING,
-        SEARCHING,
-        CONVERGING,
-        GOAL
-    };
-    
-    enum goalType{
-        ABORT = 0,
-        GNSS,
-        POST,
-        HAMMER,
-        BOTTLE
-    };
 
     class Navigator{
         private:
-        
-        GPS target;
-        
-        GPS current;
-        GPS previous;
-        //Make an IMU generic for heading
-
-        bool AllowNav = false;
-        
-        int targetState = IDLE;
-
-        int goalState = ABORT;
+        GlobalNaviator globalNav;
+        LocalNavigator localNav;
         public:
         Navigator();
 
         ~Navigator() = default;
 
-        bool executeGlobalNav();
-        
-        bool executeLocalNav();
-
         void navLoop();
 
-        void setTarget(GPS newTarget){
-            target = newTarget;
-        }
-
-        int getTarget_State(){
-            return targetState;
-        }
-        void setGoal(int newGoal){
-            goalState= newGoal;
-        }
+        
         void setCoordinates(GPS newCords);
-        GPS vectorize(GPS a, GPS b);
-
-        void DummyGetCords();//TODO remove this when we get the Actual IF
+        
     };
 }
 

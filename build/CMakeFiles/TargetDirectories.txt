@@ -1,9 +1,5 @@
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/Experimental.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/Nightly.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/Continuous.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/NightlyMemoryCheck.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/navigator.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/PACKAGE.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/RUN_TESTS.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Nick/2023Autonomy/rover-Autonomy/build/CMakeFiles/ZERO_CHECK.dir
+/home/nick/rover-Autonomy/build/CMakeFiles/navigator.dir
+/home/nick/rover-Autonomy/build/CMakeFiles/package.dir
+/home/nick/rover-Autonomy/build/CMakeFiles/package_source.dir
+/home/nick/rover-Autonomy/build/CMakeFiles/edit_cache.dir
+/home/nick/rover-Autonomy/build/CMakeFiles/rebuild_cache.dir
