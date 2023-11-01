@@ -1,3 +1,4 @@
+/home/nick/rover-Autonomy/build/CMakeFiles/nav.dir
 /home/nick/rover-Autonomy/build/CMakeFiles/navigator.dir
 /home/nick/rover-Autonomy/build/CMakeFiles/package.dir
 /home/nick/rover-Autonomy/build/CMakeFiles/package_source.dir

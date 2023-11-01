@@ -73,15 +73,15 @@ CMakeFiles/navigator.dir/src/navigator.cpp.o: CMakeFiles/navigator.dir/flags.mak
 CMakeFiles/navigator.dir/src/navigator.cpp.o: /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp
 CMakeFiles/navigator.dir/src/navigator.cpp.o: CMakeFiles/navigator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/navigator.dir/src/navigator.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/navigator.dir/src/navigator.cpp.o -MF CMakeFiles/navigator.dir/src/navigator.cpp.o.d -o CMakeFiles/navigator.dir/src/navigator.cpp.o -c /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/navigator.dir/src/navigator.cpp.o -MF CMakeFiles/navigator.dir/src/navigator.cpp.o.d -o CMakeFiles/navigator.dir/src/navigator.cpp.o -c /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp
 
 CMakeFiles/navigator.dir/src/navigator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/navigator.dir/src/navigator.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp > CMakeFiles/navigator.dir/src/navigator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp > CMakeFiles/navigator.dir/src/navigator.cpp.i
 
 CMakeFiles/navigator.dir/src/navigator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/navigator.dir/src/navigator.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp -o CMakeFiles/navigator.dir/src/navigator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nick/rover-Autonomy/navigatorApp/src/navigator.cpp -o CMakeFiles/navigator.dir/src/navigator.cpp.s
 
 # Object files for target navigator
 navigator_OBJECTS = \
@@ -92,6 +92,7 @@ navigator_EXTERNAL_OBJECTS =
 
 navigator: CMakeFiles/navigator.dir/src/navigator.cpp.o
 navigator: CMakeFiles/navigator.dir/build.make
+navigator: libnav.a
 navigator: CMakeFiles/navigator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable navigator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/navigator.dir/link.txt --verbose=$(VERBOSE)

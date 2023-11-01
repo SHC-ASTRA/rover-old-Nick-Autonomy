@@ -137,6 +137,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named nav
+
+# Build rule for target.
+nav: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nav
+.PHONY : nav
+
+# fast build rule for target.
+nav/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
+.PHONY : nav/fast
+
+#=============================================================================
 # Target rules for targets named navigator
 
 # Build rule for target.
@@ -148,6 +161,30 @@ navigator: cmake_check_build_system
 navigator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigator.dir/build.make CMakeFiles/navigator.dir/build
 .PHONY : navigator/fast
+
+source/GlobalNavigator.o: source/GlobalNavigator.cc.o
+.PHONY : source/GlobalNavigator.o
+
+# target to build an object file
+source/GlobalNavigator.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/GlobalNavigator.cc.o
+.PHONY : source/GlobalNavigator.cc.o
+
+source/GlobalNavigator.i: source/GlobalNavigator.cc.i
+.PHONY : source/GlobalNavigator.i
+
+# target to preprocess a source file
+source/GlobalNavigator.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/GlobalNavigator.cc.i
+.PHONY : source/GlobalNavigator.cc.i
+
+source/GlobalNavigator.s: source/GlobalNavigator.cc.s
+.PHONY : source/GlobalNavigator.s
+
+# target to generate assembly for a file
+source/GlobalNavigator.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/GlobalNavigator.cc.s
+.PHONY : source/GlobalNavigator.cc.s
 
 src/navigator.o: src/navigator.cpp.o
 .PHONY : src/navigator.o
@@ -183,7 +220,11 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... nav"
 	@echo "... navigator"
+	@echo "... source/GlobalNavigator.o"
+	@echo "... source/GlobalNavigator.i"
+	@echo "... source/GlobalNavigator.s"
 	@echo "... src/navigator.o"
 	@echo "... src/navigator.i"
 	@echo "... src/navigator.s"

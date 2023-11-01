@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -rdynamic CMakeFiles/navigator.dir/src/navigator.cpp.o -o navigator 
+/usr/bin/c++ -rdynamic CMakeFiles/navigator.dir/src/navigator.cpp.o -o navigator  libnav.a 
