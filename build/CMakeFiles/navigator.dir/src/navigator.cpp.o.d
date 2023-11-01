@@ -403,7 +403,5 @@ CMakeFiles/navigator.dir/src/navigator.cpp.o: \
  /home/nick/rover-Autonomy/navigatorApp/include/dataTypes/navStates.hh \
  /home/nick/rover-Autonomy/navigatorApp/include/navigators/GlobalNavigator.hh \
  /home/nick/rover-Autonomy/navigatorApp/include/navigators/Daedalus.hh \
- /home/nick/rover-Autonomy/navigatorApp/include/navigators/../dataTypes/GPS.hh \
- /home/nick/rover-Autonomy/navigatorApp/include/navigators/../dataTypes/navStates.hh \
  /home/nick/rover-Autonomy/navigatorApp/include/navigators/LocalNavigator.hh \
  /home/nick/rover-Autonomy/navigatorApp/include/AutonomyNode.hh

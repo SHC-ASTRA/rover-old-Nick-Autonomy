@@ -83,12 +83,12 @@ clean: CMakeFiles/navigator.dir/clean
 CMakeFiles/nav.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=1,2 "Built target nav"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=1,2,3 "Built target nav"
 .PHONY : CMakeFiles/nav.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nav.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 0
 .PHONY : CMakeFiles/nav.dir/rule
@@ -106,15 +106,15 @@ CMakeFiles/nav.dir/clean:
 # Target rules for target CMakeFiles/navigator.dir
 
 # All Build rule for target.
-CMakeFiles/navigator.dir/all: CMakeFiles/nav.dir/all
+CMakeFiles/navigator.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigator.dir/build.make CMakeFiles/navigator.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/navigator.dir/build.make CMakeFiles/navigator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=3,4 "Built target navigator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=4,5 "Built target navigator"
 .PHONY : CMakeFiles/navigator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/navigator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/navigator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/rover-Autonomy/build/CMakeFiles 0
 .PHONY : CMakeFiles/navigator.dir/rule

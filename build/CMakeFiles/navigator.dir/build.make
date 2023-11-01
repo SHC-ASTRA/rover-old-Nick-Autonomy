@@ -92,7 +92,6 @@ navigator_EXTERNAL_OBJECTS =
 
 navigator: CMakeFiles/navigator.dir/src/navigator.cpp.o
 navigator: CMakeFiles/navigator.dir/build.make
-navigator: libnav.a
 navigator: CMakeFiles/navigator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nick/rover-Autonomy/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable navigator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/navigator.dir/link.txt --verbose=$(VERBOSE)

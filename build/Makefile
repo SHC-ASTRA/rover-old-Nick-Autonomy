@@ -186,6 +186,30 @@ source/GlobalNavigator.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/GlobalNavigator.cc.s
 .PHONY : source/GlobalNavigator.cc.s
 
+source/nav.o: source/nav.cc.o
+.PHONY : source/nav.o
+
+# target to build an object file
+source/nav.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/nav.cc.o
+.PHONY : source/nav.cc.o
+
+source/nav.i: source/nav.cc.i
+.PHONY : source/nav.i
+
+# target to preprocess a source file
+source/nav.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/nav.cc.i
+.PHONY : source/nav.cc.i
+
+source/nav.s: source/nav.cc.s
+.PHONY : source/nav.s
+
+# target to generate assembly for a file
+source/nav.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/nav.cc.s
+.PHONY : source/nav.cc.s
+
 src/navigator.o: src/navigator.cpp.o
 .PHONY : src/navigator.o
 
@@ -225,6 +249,9 @@ help:
 	@echo "... source/GlobalNavigator.o"
 	@echo "... source/GlobalNavigator.i"
 	@echo "... source/GlobalNavigator.s"
+	@echo "... source/nav.o"
+	@echo "... source/nav.i"
+	@echo "... source/nav.s"
 	@echo "... src/navigator.o"
 	@echo "... src/navigator.i"
 	@echo "... src/navigator.s"
