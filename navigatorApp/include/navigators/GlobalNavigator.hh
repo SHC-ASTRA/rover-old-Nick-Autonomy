@@ -13,9 +13,10 @@
 #ifndef GLOBAL_NAV
 #define GLOBAL_NAV
 namespace nav{
-    class GlobalNavigator : Daedalus{
+    
+    class GlobalNavigator: Daedalus{
         public:
-        bool executeNav() override;
+        bool executeNav();
     };
 }
 #endif

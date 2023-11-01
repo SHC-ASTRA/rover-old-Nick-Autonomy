@@ -15,7 +15,7 @@
 namespace nav{
     class LocalNavigator: Daedalus{
         public:
-        bool executeNav() override{
+        bool executeNav(){
             return true;
         };
     };

@@ -5,6 +5,6 @@
 #include <iostream>
 int main(void){
     nav::Navigator navi;
-    
+    std::cout << "Here" << std::endl;
     return 0;
 }

@@ -35,7 +35,7 @@ namespace nav{
 
         ~Daedalus() = default;
 
-        virtual bool executeNav(){
+        bool executeNav(){
             return false;
         };
 
