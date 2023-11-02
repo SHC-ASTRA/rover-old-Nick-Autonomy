@@ -5,7 +5,7 @@ project(navigator VERSION 0.1.0)
 
 add_executable(${PROJECT_NAME} src/navigator.cpp)
 
-file(GLOB CLASS_IMPLEMENTATIONS "source/*.cc")
+file(GLOB CLASS_IMPLEMENTATIONS "navImpl/*.cc")
 add_library(nav 
     ${CLASS_IMPLEMENTATIONS}
 )

@@ -162,53 +162,53 @@ nav/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/build
 .PHONY : nav/fast
 
-source/GlobalNavigator.o: source/GlobalNavigator.cc.o
-.PHONY : source/GlobalNavigator.o
+navImpl/GlobalNavigator.o: navImpl/GlobalNavigator.cc.o
+.PHONY : navImpl/GlobalNavigator.o
 
 # target to build an object file
-source/GlobalNavigator.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/GlobalNavigator.cc.o
-.PHONY : source/GlobalNavigator.cc.o
+navImpl/GlobalNavigator.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/navImpl/GlobalNavigator.cc.o
+.PHONY : navImpl/GlobalNavigator.cc.o
 
-source/GlobalNavigator.i: source/GlobalNavigator.cc.i
-.PHONY : source/GlobalNavigator.i
+navImpl/GlobalNavigator.i: navImpl/GlobalNavigator.cc.i
+.PHONY : navImpl/GlobalNavigator.i
 
 # target to preprocess a source file
-source/GlobalNavigator.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/GlobalNavigator.cc.i
-.PHONY : source/GlobalNavigator.cc.i
+navImpl/GlobalNavigator.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/navImpl/GlobalNavigator.cc.i
+.PHONY : navImpl/GlobalNavigator.cc.i
 
-source/GlobalNavigator.s: source/GlobalNavigator.cc.s
-.PHONY : source/GlobalNavigator.s
+navImpl/GlobalNavigator.s: navImpl/GlobalNavigator.cc.s
+.PHONY : navImpl/GlobalNavigator.s
 
 # target to generate assembly for a file
-source/GlobalNavigator.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/GlobalNavigator.cc.s
-.PHONY : source/GlobalNavigator.cc.s
+navImpl/GlobalNavigator.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/navImpl/GlobalNavigator.cc.s
+.PHONY : navImpl/GlobalNavigator.cc.s
 
-source/nav.o: source/nav.cc.o
-.PHONY : source/nav.o
+navImpl/nav.o: navImpl/nav.cc.o
+.PHONY : navImpl/nav.o
 
 # target to build an object file
-source/nav.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/nav.cc.o
-.PHONY : source/nav.cc.o
+navImpl/nav.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/navImpl/nav.cc.o
+.PHONY : navImpl/nav.cc.o
 
-source/nav.i: source/nav.cc.i
-.PHONY : source/nav.i
+navImpl/nav.i: navImpl/nav.cc.i
+.PHONY : navImpl/nav.i
 
 # target to preprocess a source file
-source/nav.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/nav.cc.i
-.PHONY : source/nav.cc.i
+navImpl/nav.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/navImpl/nav.cc.i
+.PHONY : navImpl/nav.cc.i
 
-source/nav.s: source/nav.cc.s
-.PHONY : source/nav.s
+navImpl/nav.s: navImpl/nav.cc.s
+.PHONY : navImpl/nav.s
 
 # target to generate assembly for a file
-source/nav.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/source/nav.cc.s
-.PHONY : source/nav.cc.s
+navImpl/nav.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav.dir/build.make CMakeFiles/nav.dir/navImpl/nav.cc.s
+.PHONY : navImpl/nav.cc.s
 
 src/navigator.o: src/navigator.cpp.o
 .PHONY : src/navigator.o
@@ -246,12 +246,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... nav"
 	@echo "... navigator"
-	@echo "... source/GlobalNavigator.o"
-	@echo "... source/GlobalNavigator.i"
-	@echo "... source/GlobalNavigator.s"
-	@echo "... source/nav.o"
-	@echo "... source/nav.i"
-	@echo "... source/nav.s"
+	@echo "... navImpl/GlobalNavigator.o"
+	@echo "... navImpl/GlobalNavigator.i"
+	@echo "... navImpl/GlobalNavigator.s"
+	@echo "... navImpl/nav.o"
+	@echo "... navImpl/nav.i"
+	@echo "... navImpl/nav.s"
 	@echo "... src/navigator.o"
 	@echo "... src/navigator.i"
 	@echo "... src/navigator.s"
