@@ -1,15 +1,7 @@
-/*
-@DESIGN
-///
-//Interface to ros and builds all publishers and subscribers for topics
-///
-@MODEL
-///
-//None
-///
-*/
-#pragma once
 
-class AutonomyNode {
+#pragma once 
+#include "rclcpp/rclcpp.hpp"
 
+class AutonomyNode: public rclcpp::Node{
+    
 };
