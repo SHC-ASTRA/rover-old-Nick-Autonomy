@@ -9,7 +9,7 @@ file(GLOB CLASS_IMPLEMENTATIONS "navImpl/*.cc")
 add_library(nav 
     ${CLASS_IMPLEMENTATIONS}
 )
-#message(${CLASS_IMPLEMENTATIONS})
+
 
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
@@ -28,7 +28,6 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
 
 
-
 ament_target_dependencies(${PROJECT_NAME} rclcpp std_msgs)
 install(
     DIRECTORY include/
@@ -36,7 +35,7 @@ install(
 )
 
 install(
-    TARGETS nav
+    TARGETS ${PROJECT_NAME}
     DESTINATION lib/${PROJECT_NAME}
 )
 

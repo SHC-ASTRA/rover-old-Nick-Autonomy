@@ -10,10 +10,11 @@
 ///
 */
 #pragma once
+#include <stdint.h>
 #ifndef NAV_STATES
 #define NAV_STATES
 namespace nav{
-    enum AutonomousState{
+    enum AutonomousState: uint8_t{
             IDLE =0,
             NAVIGATING,
             SEARCHING,
@@ -21,7 +22,7 @@ namespace nav{
             GOAL
         };
         
-        enum goalType{
+        enum goalType: uint8_t{
             ABORT = 0,
             GNSS,
             POST,
