@@ -19,6 +19,6 @@ class AutonomyNode: public rclcpp::Node{
     void TARGET_RECEIVED_CALLBACK();
 
     public:
-    AutonomyNode(): Node("ASTRA_Autonomy")
+    AutonomyNode(): rclcpp::Node("Autonomy") {};
 
 };
