@@ -3,11 +3,15 @@ project(AIKO VERSION 0.1.0)
 include(ctest)
 enable_testing()
 
-add_executable(${PROJECT_NAME} src/navigator.cpp)
+add_executable(${PROJECT_NAME} src/ObjectDetection.cpp)
+
+file(GLOB CLASS_IMPLEMENTATIONS "impl/*.cc")
+add_library(detection ${CLASS_IMPLEMENTATIONS})
+
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/src)
+target_link_libraries(detection)
 
-set(realsense2_INCLUDE_DIR "C:/Users/Nick/librealsense/include")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
