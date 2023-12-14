@@ -13,6 +13,7 @@
 #include <stdint.h>
 #include <vector>
 #include <string>
+#include <opencv2/aruco.hpp>
 namespace Vision{
     
     const char* COCO_NAME = "bottle";//@TODO include hammer
@@ -23,6 +24,9 @@ namespace Vision{
     const float NMS_THRESHOLD = 0.45f;
     const float CONFIDENCE_THRESHOLD = 0.45f;
 
+    cv::aruco::DetectorParameters detectorParams = cv::aruco::DetectorParameters();
+    cv::aruco::Dictionary dictionary = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_4X4_50 );
+    cv::aruco::ArucoDetector detector(dictionary,detectorParams);
     // Text parameters.
     const float FONT_SCALE = 0.7f;
     const int FONT_FACE = cv::FONT_HERSHEY_SIMPLEX;
@@ -34,7 +38,9 @@ namespace Vision{
     cv::Scalar BLUE = cv::Scalar(255, 178, 50);
     cv::Scalar YELLOW = cv::Scalar(0, 255, 255);
     cv::Scalar RED = cv::Scalar(0,0,255);
-    enum AIKO_STATES: uint8_t{
-        DEBUG = 1,
+    enum AIKO_STATES{
+        ARUCO,
+        BOTTLE,
+        HAMMER
     };
 }
