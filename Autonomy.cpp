@@ -5,6 +5,8 @@
 #include <AutonomyNode.hh>
 #include <opencv2/aruco.hpp>
 #include <librealsense2/rs.hpp>
+#include <AIKO.hh>
+#include "navigatorApp/include/dataTypes/navStates.hh"
 void setupRos(int argc, char * argv[]){
     rclcpp::init(argc,argv);
     rclcpp::spin(std::make_shared<AutonomyNode>());
@@ -14,9 +16,18 @@ void setupRos(int argc, char * argv[]){
 
 
 int main(int argc,char * argv[]){
-    //nav::Navigator navi;
-    std::cout << "Here" << std::endl;
-    //setupRos(argc,argv);
-    std::cout <<"here" <<std::endl;
+    cv::dnn::Net net = cv::dnn::readNetFromONNX("/home/octoprint/ros2_ws/src/rover-Autonomy/arucoApp/src/yolov5s.onnx");
+    cv::String filepath = "/home/octoprint/ros2_ws/src/rover-Autonomy/testImgs/*.png";
+    Vision::AIKO seeker(net);
+    seeker.setState(nav::SEARCHING);
+    seeker.setGoal(nav::POST);
+    std::vector<cv::String> fileNames;
+    std::vector<cv::Mat> processedImgs;
+    cv::glob(filepath,fileNames);
+    for(size_t file = 0; file<fileNames.size();file++){
+        cv::Mat img = cv::imread(fileNames[file]);
+        std::cout << fileNames[file] << std::endl;
+        seeker.readFrame(img);
+    }
     return 0;
 }

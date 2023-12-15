@@ -11,7 +11,7 @@ add_library(nav
 )
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/navigatorApp/include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/navigatorApp/src)
-target_link_libraries(nav)
+target_link_libraries(${PROJECT_NAME} nav)
 
 
 file(GLOB AIKO_CLASS_IMPLEMENTATIONS "arucoApp/impl/*.cc")
@@ -20,15 +20,19 @@ add_library(aiko
 )
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/arucoApp/include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/acrucoApp/src)
-target_link_libraries(aiko)
+target_link_libraries(${PROJECT_NAME} aiko)
 
 
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
+link_directories(${OpenCV_LIB_DIR})
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
+
 
 find_package(realsense2 REQUIRED)
 include_directories(${realsense_INCLUDE_DIR})
+
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
