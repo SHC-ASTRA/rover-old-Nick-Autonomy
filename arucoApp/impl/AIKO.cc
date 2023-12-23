@@ -5,10 +5,10 @@
 #include <vector>
 #include "../include/dataTypes/Detection.hh"
 #include "../../navigatorApp/include/dataTypes/navStates.hh"
+
 std::vector<cv::Mat> Vision::AIKO::readFrame(cv::Mat img){
     std::vector<cv::Mat> outputOverlays;
     if(state ==nav::SEARCHING || state == nav::CONVERGING && goal == nav::POST){
-        
         cv::Mat newImg;
         img.copyTo(newImg);
         std::vector<int> markerIds;
