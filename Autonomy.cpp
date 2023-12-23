@@ -11,10 +11,9 @@
 #include <memory>
 
 auto navigationHandler = std::make_shared<nav::Navigator>();
-void setupRos(int argc, char * argv[]){
-    rclcpp::init(argc,argv);
-    rclcpp::spin(std::make_shared<AutonomyNode>(navigationHandler));
-    rclcpp::shutdown();//Dev function call 
+void setupRos(int argc, char * argv[],std::shared_ptr<AutonomyNode> nodeHandler){
+    rclcpp::spin(nodeHandler);
+    rclcpp::shutdown();
 }
 
 void testImgRead(){
@@ -33,7 +32,7 @@ void testImgRead(){
     }
 }
 
-void autonomousControl(){
+void autonomousControl(std::shared_ptr<AutonomyNode> nodeHandler){
     while(true){
      switch(navigationHandler->getState()){
         case nav::IDLE:
@@ -46,7 +45,7 @@ void autonomousControl(){
         break;
         case nav::GOAL:
         break;
-        case default:
+        default:
         navigationHandler->setState(nav::IDLE);
         break;
      }
@@ -54,8 +53,10 @@ void autonomousControl(){
 }
 
 int main(int argc,char * argv[]){
-    std::thread rosHandler(setupRos,argc,argv);
-    std::thread navHandler(autonomousControl);
+    rclcpp::init(argc,argv);
+    auto nodeHandler = std::make_shared<AutonomyNode>(navigationHandler);
+    std::thread rosHandler(setupRos,argc,argv,nodeHandler);
+    std::thread navHandler(autonomousControl,nodeHandler);
     rosHandler.join();
     navHandler.join();
     return 0;

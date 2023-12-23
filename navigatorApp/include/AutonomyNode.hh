@@ -23,16 +23,16 @@ class AutonomyNode: public rclcpp::Node{
         navigator_->setState(state.data);
     };
     void timedPublishCallback(){
-        //std_msgs::msg::Int8 message;
-        //message.data = navigator_->getState();
-        //statePublisher_->publish(message);
+        std_msgs::msg::Int8 message;
+        message.data = navigator_->getState();
+        statePublisher_->publish(message);
     };
+
+    
     public:
     AutonomyNode(): rclcpp::Node("astra_autonomy"){};
     AutonomyNode(std::shared_ptr<nav::Navigator> nav_): rclcpp::Node("astra_autonomy"){
         navigator_ = nav_;
-        navigator_->setState(nav::GOAL);
-        std::cout <<navigator_->getState() << "here" <<std::endl;
         targetSubscription_ = this->create_subscription<std_msgs::msg::Int8>("astra/auto/setTarget",8,std::bind(&AutonomyNode::target_sub_callback,this,_1));
         stateSubscription_ = this->create_subscription<std_msgs::msg::Int8>("astra/auto/setState",8,std::bind(&AutonomyNode::state_sub_callback,this,_1));
         statePublisher_ = this->create_publisher<std_msgs::msg::Int8>("astra/auto/setState",8);

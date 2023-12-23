@@ -15,11 +15,11 @@
 #include <stdint.h>
 namespace nav{
     enum AutonomousState: int8_t{
-            IDLE =0,
-            NAVIGATING,
-            SEARCHING,
-            CONVERGING,
-            GOAL
+            IDLE =0,//Waiting
+            NAVIGATING,//going to GNSS location
+            SEARCHING,//Looking for object of interest
+            CONVERGING,//Approaching found object of interest
+            GOAL//:D
         };
         
         enum goalType: int8_t{
