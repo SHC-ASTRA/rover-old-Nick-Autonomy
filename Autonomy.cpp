@@ -58,7 +58,5 @@ int main(int argc,char * argv[]){
     std::thread navHandler(autonomousControl);
     rosHandler.join();
     navHandler.join();
-    
-    setupRos(argc,argv);
     return 0;
 }
