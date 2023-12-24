@@ -38,6 +38,12 @@ namespace nav{
         bool executeNav(){
             return false;
         };
+        void setTarget_State(int newState){
+            targetState = newState;
+        }
+        void setGoal_State(int newGoal){
+            goalState = newGoal;
+        }
 
 
     };

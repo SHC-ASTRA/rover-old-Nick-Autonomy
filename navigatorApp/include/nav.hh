@@ -22,37 +22,35 @@ namespace nav{
 
     class Navigator{
         private:
-        GlobalNavigator globalNav;
-        LocalNavigator localNav;
+        
         int8_t state = IDLE;
         int8_t target = ABORT;
+        GPS prev;
         public:
+        GlobalNavigator globalNav;
+        LocalNavigator localNav;
+        GPS current;
+        GPS targetLoc;
         Navigator(){
             
         };
 
         ~Navigator() = default;
 
-        void navLoop();
-
-        void setState(int8_t newState){
-            if(newState > GOAL || newState < IDLE){
-                std::cout << "Failed to update state";
-                return;
-            }
-            state = newState;
-        };
+        void setState(int8_t newState);
         int8_t getState(){
             return state;
         }
-        void setTarget(int8_t newTarget){
-            if(newTarget > BOTTLE || newTarget < ABORT){
-                std::cout << "Failed to update target";
-                return;
-            }
-            target = newTarget;
-        };
+
+        int8_t getTarget(){
+            return target;
+        }
+        void setTarget(int8_t newTarget);
         void setCoordinates(GPS newCords);
+        void setTargetLoc(GPS newTarget){
+            targetLoc = newTarget;
+        };
+        
         
     };
 }

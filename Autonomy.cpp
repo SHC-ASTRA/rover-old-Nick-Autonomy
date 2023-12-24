@@ -38,6 +38,17 @@ void autonomousControl(std::shared_ptr<AutonomyNode> nodeHandler){
         case nav::IDLE:
         break;
         case nav::NAVIGATING:
+        if(navigationHandler->globalNav.getTargetDistance() <=3){
+            if(navigationHandler->getTarget() == nav::GNSS){
+                navigationHandler->setState(nav::GOAL);
+            }
+            else{
+                navigationHandler->setState(nav::SEARCHING);
+            }
+        }
+        else{
+            //NAVIGATE HERE
+        }
         break;
         case nav::SEARCHING:
         break;

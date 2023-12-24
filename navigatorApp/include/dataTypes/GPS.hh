@@ -14,9 +14,8 @@
 #define GPS_t
 namespace nav{
     typedef std::array<double,2> GPS;
-
-    GPS vectorize(GPS a, GPS b){
-        //@TODO add to model
+    
+    inline GPS vectorize(GPS a, GPS b){
         GPS result = {a[0]-b[0],a[1]-b[1]};
         return result;
     };
