@@ -17,22 +17,30 @@ void setupRos(int argc, char * argv[],std::shared_ptr<AutonomyNode> nodeHandler)
 }
 
 void testImgRead(){
-    cv::dnn::Net net = cv::dnn::readNetFromONNX("/home/octoprint/ros2_ws/src/rover-Autonomy/arucoApp/src/yolov5s.onnx");//TODO find the file locally (it stopped doing that for some reason)
+    std::vector<Vision::Detection> identifiedObjs;
+    cv::dnn::Net net = cv::dnn::readNetFromONNX("/home/octoprint/ros2_ws/src/rover-Autonomy/arucoApp/src/best.onnx");//TODO find the file locally (it stopped doing that for some reason)
     cv::String filepath = "/home/octoprint/ros2_ws/src/rover-Autonomy/testImgs/*.png";//See above comment
     Vision::AIKO seeker(net);
+    int detectNum = 0;
     seeker.setState(nav::SEARCHING);
     seeker.setGoal(nav::POST);
     std::vector<cv::String> fileNames;
     std::vector<cv::Mat> processedImgs;
     cv::glob(filepath,fileNames);
     for(size_t file = 0; file<fileNames.size();file++){
-        cv::Mat img = cv::imread(fileNames[file]);
+        cv::Mat img = cv::imread(fileNames[file]); 
         std::cout << fileNames[file] << std::endl;
-        seeker.readFrame(img);
+        identifiedObjs = seeker.readFrame(img);
+        for(int i=0;i<identifiedObjs.size();i++){
+            cv::rectangle(img,identifiedObjs[i].box,1,8,0);
+            cv::imshow("Display",img);
+            int k = cv::waitKey(0);
+        }
     }
 }
 
 void autonomousControl(std::shared_ptr<AutonomyNode> nodeHandler){
+    testImgRead(); 
     while(true){
      switch(navigationHandler->getState()){
         case nav::IDLE:

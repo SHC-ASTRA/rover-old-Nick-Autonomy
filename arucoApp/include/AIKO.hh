@@ -42,6 +42,6 @@ namespace Vision{
         }
         void setState(int newState) {state = newState;};
         void setGoal(int newGoal) {goal= newGoal;};
-        std::vector<cv::Mat> readFrame(cv::Mat img); //@TODO change return type to whatever coordinates will be used to locate the pixel 
+        std::vector<Detection> readFrame(cv::Mat &input_img); //@TODO change return type to whatever coordinates will be used to locate the pixel 
     };
 }

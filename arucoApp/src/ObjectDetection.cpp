@@ -19,6 +19,3 @@ detect.py --weights yolov5s --dnn --source 0
 /*
 This implementation will be made for the debug environment and will later be upgraded to interface with the depth camera
 */
-int main(){
-
-}
