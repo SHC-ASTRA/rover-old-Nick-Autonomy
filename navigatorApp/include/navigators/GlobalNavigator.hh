@@ -17,6 +17,7 @@ namespace nav{
     class GlobalNavigator: Daedalus{
         public:
         bool executeNav();
+        double getTargetDistance();
     };
 }
 #endif

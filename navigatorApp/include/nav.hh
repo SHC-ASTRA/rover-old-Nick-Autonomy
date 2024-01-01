@@ -16,23 +16,41 @@
 #include "dataTypes/navStates.hh"
 #include "navigators/GlobalNavigator.hh"
 #include "navigators/LocalNavigator.hh"
+#include <stdint.h>
+#include <iostream>
 namespace nav{
 
     class Navigator{
         private:
+        
+        int8_t state = IDLE;
+        int8_t target = ABORT;
+        GPS prev;
+        public:
         GlobalNavigator globalNav;
         LocalNavigator localNav;
-        public:
+        GPS current;
+        GPS targetLoc;
         Navigator(){
             
         };
 
         ~Navigator() = default;
 
-        void navLoop();
+        void setState(int8_t newState);
+        int8_t getState(){
+            return state;
+        }
 
-        
+        int8_t getTarget(){
+            return target;
+        }
+        void setTarget(int8_t newTarget);
         void setCoordinates(GPS newCords);
+        void setTargetLoc(GPS newTarget){
+            targetLoc = newTarget;
+        };
+        
         
     };
 }
